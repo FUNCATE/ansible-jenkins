@@ -1,0 +1,7 @@
+---
+
+    - name: APT | Jenkins Dependencies
+      apt: name={{ item }} state=latest update_cache=yes install_recommends=no
+      sudo: yes
+      with_items:
+          - openjdk-7-jre

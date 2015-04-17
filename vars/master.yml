@@ -1,0 +1,14 @@
+---
+
+    jenkins:
+        apt:
+            key: https://jenkins-ci.org/debian/jenkins-ci.org.key
+            repo: 'deb http://pkg.jenkins-ci.org/debian binary/'
+        #
+        # Default URL to:
+        # http://127.0.0.1:8080/jenkins/cli
+        #
+        local:
+            url: '127.0.0.1'
+            port: '8080'
+            path: '/'

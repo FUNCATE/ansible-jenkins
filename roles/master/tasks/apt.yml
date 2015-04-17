@@ -1,0 +1,13 @@
+---
+
+    - name: APT | Add Jenkins repo Key
+      apt_key: url={{ jenkins.apt.key }} state=present
+      sudo: yes
+
+    - name: APT | Add Jenkins repo
+      apt_repository: repo='{{ jenkins.apt.repo }}' state=present update_cache=yes
+      sudo: yes
+
+    - name: APT | Install Jenkins
+      apt: name=jenkins state=latest install_recommends=no
+      sudo: yes

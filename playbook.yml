@@ -1,0 +1,9 @@
+---
+
+    - hosts: master
+      remote_user: YOUR_REMOTE_USER
+      vars_files:
+        - vars/master.yml
+      roles:
+        - dependencies
+        - master
