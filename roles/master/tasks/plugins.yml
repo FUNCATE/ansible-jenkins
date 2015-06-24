@@ -1,10 +1,11 @@
 ---
 
     - name: Jenkins | Download CLI (Moved to /tmp)
-      get_url: url='http://{{ jenkins.local.url }}:{{ jenkins.local.port }}/{{ jenkins.local.path }}/jnlpJars/jenkins-cli.jar' dest=/tmp
+      sudo: yes
+      get_url: url='http://{{ jenkins.local.url }}:{{ jenkins.local.port }}{{ jenkins.local.path }}jnlpJars/jenkins-cli.jar' dest=/tmp owner={{ ansible_ssh_user }} mode=0777
 
     - name: Jenkins | Install plugins
-      shell: java -jar /tmp/jenkins-cli.jar -s 'http://{{ jenkins.local.url }}:{{ jenkins.local.port }}{{ jenkins.local.path }}' install-plugin {{ item }}
+      shell: java -jar /tmp/jenkins-cli.jar -s 'http://{{  jenkins.local.url }}:{{ jenkins.local.port }}{{ jenkins.local.path }}' install-plugin {{ item }}
       with_items: jenkins.plugins
 
     - name: Jenkins | Restart

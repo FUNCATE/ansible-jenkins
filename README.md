@@ -24,13 +24,12 @@ You need this packages to **Python 2.7**, because modules using:
 
 ```
 [master]
-<IP>
+<IP> ansible-ssh-user=<user-client-machine>
 ```
 
 > One per line
 
 - Enter `vars` directory and edit variables what you need
-- `remote_user` in `playbook.yml` with user in future master machine(s)
 - Execute command:
 
 ```
