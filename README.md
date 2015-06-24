@@ -1,7 +1,7 @@
 
 ## What is
 
-This is Ansible playbook to install Jenkins Master machine
+This is [Ansible](https://blog.codecentric.de/en/2014/06/ansible-simple-yet-powerful-automation/) playbook to install Jenkins Master machine
 
 ## Compatible operating systems
 
@@ -10,8 +10,8 @@ This is Ansible playbook to install Jenkins Master machine
 ## You need
 
 - Python 2.7
-- Ansible
-- Debian `sshpass` for ask password
+- [Ansible](http://docs.ansible.com/intro_installation.html#latest-releases-via-apt-ubuntu)
+- Debian package `sshpass` (for ask password)
 
 You need this packages to **Python 2.7**, because modules using:
 
