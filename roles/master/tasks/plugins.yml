@@ -5,49 +5,7 @@
 
     - name: Jenkins | Install plugins
       shell: java -jar /tmp/jenkins-cli.jar -s 'http://{{ jenkins.local.url }}:{{ jenkins.local.port }}{{ jenkins.local.path }}' install-plugin {{ item }}
-      with_items:
-          #
-          # Plugin array
-          #
-          - antisamy-markup-formatter
-          - avatar
-          - backup
-          - cobertura
-          - conditional-buildstep
-          - copyartifact
-          - cppcheck
-          - credentials
-          - doxygen
-          - envinject
-          - extra-columns
-          - ftppublisher
-          - git
-          - git-client
-          - greenballs
-          - jobConfigHistory
-          - junit
-          - mailer
-          - mapdb-api
-          - matrix-auth
-          - matrix-project
-          - maven-plugin
-          - msbuild
-          - nested-view
-          - progress-bar-column-plugin
-          - run-condition
-          - scm-api
-          - skip-certificate-check
-          - ssh-credentials
-          - ssh-slaves
-          - subversion
-          - svn-tag
-          - token-macro
-          - view-job-filters
-          - warnings # Depends analysis-core
-          - windows-slaves
-          # Hudson plugins
-          - cmakebuilder
-          - matrixtieparent
+      with_items: jenkins.plugins
 
     - name: Jenkins | Restart
       shell: java -jar /tmp/jenkins-cli.jar -s 'http://{{ jenkins.local.url }}:{{ jenkins.local.port }}{{ jenkins.local.path }}' restart

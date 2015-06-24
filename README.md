@@ -38,7 +38,3 @@ $ ansible-playbook -i master playbook.yml --ask-pass --ask-sudo-pass
 ```
     - `--ask-pass`: password to ssh connection
     - `--ask-sudo-pass`: password to remote_user
-
-## TODO
-
-- Create plugins array in file `vars/master.yml`

@@ -4,6 +4,46 @@
         apt:
             key: https://jenkins-ci.org/debian/jenkins-ci.org.key
             repo: 'deb http://pkg.jenkins-ci.org/debian binary/'
+        plugins:
+            - antisamy-markup-formatter
+            - avatar
+            - backup
+            - cobertura
+            - conditional-buildstep
+            - copyartifact
+            - cppcheck
+            - credentials
+            - doxygen
+            - envinject
+            - extra-columns
+            - ftppublisher
+            - git
+            - git-client
+            - greenballs
+            - jobConfigHistory
+            - junit
+            - mailer
+            - mapdb-api
+            - matrix-auth
+            - matrix-project
+            - maven-plugin
+            - msbuild
+            - nested-view
+            - progress-bar-column-plugin
+            - run-condition
+            - scm-api
+            - skip-certificate-check
+            - ssh-credentials
+            - ssh-slaves
+            - subversion
+            - svn-tag
+            - token-macro
+            - view-job-filters
+            - warnings # Depends analysis-core
+            - windows-slaves
+            # Hudson plugins
+            - cmakebuilder
+            - matrixtieparent
         #
         # Default URL to:
         # http://127.0.0.1:8080/jenkins/cli
